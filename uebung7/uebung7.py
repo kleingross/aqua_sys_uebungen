@@ -5,8 +5,12 @@ import matplotlib.pyplot as plt
 def LMWL(O):
     return 7.70*O + 5.74
 
+#wrong standardise function
+#def standardise(O, H):
+#    return O - 1.336, H - 88
+
 def standardise(O, H):
-    return O - 1.336, H - 88
+    return (-1.336*O)/1000.0 + O - 1.336, (-88*H)/1000.0 + H - 88
 
 #input data
 height = -np.array([0.36, 3.26, 4.26, 6.26, 9.26, 11.26, 11.66, 12.06, 12.66])
